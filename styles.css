@@ -1,0 +1,505 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use the font that matches your design */
+    background-color: #28122e;
+}
+
+/* Header styles */
+.header-background {
+    background: url('/jrcImages/hand-making-dumplings.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000; /* Ensure the navbar is above other items */
+}
+
+.nav-left, .nav-right {
+    flex: 1; /* This gives equal space to the left and right sides of the navbar */
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center; /* This centers the menu items horizontally */
+    align-items: center; /* This centers the menu items vertically */
+    flex: 2; /* This allocates twice as much space to the center to allow for spacing between menu items */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px; /* This will give spacing between your nav items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 10px; /* Optional padding to make the links easier to click */
+}
+
+.nav-logo, .nav-cta {
+    font-family: 'Agrandir'; /* Use the font that matches your design */
+    
+}
+
+
+/* Header title for large screens */
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Hero section */
+.hero {
+    color: white;
+    padding: 100px 0;
+    align-items: center;
+
+    max-height: 100vh;
+}
+
+
+.hero h3 {
+    font-family: 'Editorial-ThinItalic';
+    font-size: 2em; /* Adjust to match the size in the image */
+    margin: 0;
+    font-weight: normal; /* If 'We are' is not meant to be bold */
+    letter-spacing: 2px; /* Example styling */
+    padding-right:85%;
+    
+}
+
+.hero h1 {
+    font-size: 5em; /* Adjust to match the size in the image */
+    margin: 0.2em 0; /* Tighten the line spacing between 'We are' and 'JRC CULINARY GROUP' */
+    font-weight: bold;
+    letter-spacing: 4px; /* Example styling */
+    font-family: 'Editorial-Italic';
+}
+
+.hero p {
+    font-size: 1.2em; /* Adjust to match the size in the image */
+    margin: 0.5em 0 1em 0; /* Add some space above and below the paragraph */
+    font-family: 'Agrandir';
+    
+    /*move the text to the right*/
+    padding-left: 40%;
+}
+
+.learn-more-btn {
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 1em; /* Adjust to match the size in the image */
+    border: transparent; /* Ensure the border is visible */
+    margin-top: 2em; /* Space between the text and the button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white; /* Text color */
+    background: none; /* Transparent background */
+    /*move the button to the bottom*/
+    position: absolute; /* Position the button absolutely within the .hero container */
+    bottom: 20px; /* Adjust as needed to place the button at the desired distance from the bottom */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    border-radius: 10px;
+
+}
+
+.learn-more-btn:hover {
+    background-color: white; /* Color change on hover */
+    color: black; /* Text color change on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        padding: 5px 0;
+    }
+
+    .header-title {
+        display: block; /* Show the title in the center of the navbar for small screens */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.8em;
+    }
+
+    .learn-more-btn {
+        font-size: 0.8em;
+        padding: 8px 16px;
+    }
+}
+/* Additional styles.css content */
+
+/* About Us section styles */
+#about {
+    color: #fff;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.about-container {
+    max-width: 900px; /* Or the width you prefer */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.about-us {
+    font-family: 'Agrandir';
+    font-weight: 400;
+    font-size: 1.0em;
+    letter-spacing: 2px;
+}
+
+.about-heading {
+    font-size: 3.5em; /* Adjust as needed */
+    margin-bottom: 40px;
+    line-height: 1.4;
+    font-family: 'Editorial-ThinItalic';
+    font-weight: 300; /* Lighter font-weight, adjust as needed */
+}
+
+.about-text {
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 400; /* Regular font-weight, adjust as needed */
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: 'Agrandir';
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 1.5em;
+    }
+
+    .about-text {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-heading {
+        font-size: 1.2em;
+    }
+
+    .about-text {
+        font-size: 0.8em;
+    }
+}
+
+.image-collage-container{
+    background-color: #E4E2DD;
+    align-items: center;
+}
+
+.image-collage-container h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    padding: 40px;
+    font-family: 'Editorial-Italic';
+}
+.image-collage {
+    position: relative;
+    max-width: 300px; /* Adjust to fit your site's layout */
+    margin: auto; /* Center the collage in the middle of the page */
+    height: 700px; /* Adjust based on your images' aspect ratio and size */
+    align-items: center;
+    
+}
+
+.collage-image {
+    position: absolute;
+    max-width: none; /* Override default styles if necessary */
+    height: 400px; /* Adjust height to maintain aspect ratio */
+}
+
+.collage-image-1 {
+    /* top: -10%; */
+    top:30%;
+    left: -65%;
+    z-index: 2;
+    transform: rotate(-15deg); /* Adjust rotation as necessary */
+}
+
+.collage-image-2 {
+    left: 6%;
+    z-index: 1;
+    /* transform: rotate(15deg); */
+}
+
+.collage-image-3 {
+    /* top: 20%; */
+    top:30%;
+    right: -65%; /* Position to overlap on the right side */
+    z-index: 3;
+    transform: rotate(15deg); /* Adjust rotation as necessary */
+}
+
+
+#products {
+    background-color: #E4E2DD; /* Adjust if your design requires a different color */
+    color: #000; /* Adjust the color based on your design */
+    padding: 50px 0;
+}
+
+.products-container {
+    max-width: 1200px; /* Or the width you prefer */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    width: 250px; /* Adjust the width for your design */
+    margin: 10px;
+    border: 1px solid #404040; /* Optional: Add a border around each product item */
+    border-radius: 10px;
+    padding: 20px;
+    background: #E4E2DD; /* Light grey background for the product item */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    margin-bottom: 10px;
+    font-family: 'Editorial-Regular';
+    font-size: 1.5em;
+    color: #404040;
+    
+}
+
+.product-item p {
+    font-family: 'Agrandir';
+    color: #404040;
+}
+
+/* You can add media queries for responsiveness */
+@media (max-width: 768px) {
+    .product-item {
+        width: 45%; /* Adjust for medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 90%; /* Adjust for small-sized screens */
+    }
+}
+
+
+
+#distribution {
+    background-color: #E4E2DD; /* Adjust the color to match your design */
+    color: #404040; /* Adjust the color to match your design */
+    padding: 50px 0;
+}
+
+.distribution-container {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.distribution-type {
+    margin-bottom: 30px;
+}
+
+.distribution-container h1 {
+    text-align: left; /* Center the title */
+    margin-bottom: 0.5em; /* Space between title and content */
+    font-family: 'Editorial-Italic';
+    font-size: 3em;
+}
+
+.distribution-type h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-family: 'Editorial-Italic';
+    margin-left: 90px;
+}
+
+.distribution-type ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 130px;
+    font-family: 'Agrandir';
+    font-weight: 300;
+}
+
+.distribution-type ul li {
+    padding: 5px 0;
+    color: #404040; /* Bullet point color */
+    font-size: 1.5em; /* Adjust bullet size */
+    padding-right: 0.5em; /* Space between bullet and text */
+}
+.distribution-type .indent {
+    padding-left: 50px; /* Adjust as needed */
+}
+
+
+/* Contact section */
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children to the edges */
+    align-items: center; /* Centers children vertically */
+    padding: 50px 10%; /* Add padding on top/bottom and a percentage of the viewport width on left/right */
+    color: #E4E2DD; /* Assuming the text color is white */
+    height: 400px;
+    max-width: 100vw;
+    
+}
+
+.left-side {
+    max-width: 50%; /* Adjust the width as necessary */
+    /* If the title needs more separation from the text, adjust the padding here */
+}
+
+.left-side h2 {
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Editorial-Italic';
+}
+.left-side p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    font-family: 'Agrandir';
+}
+
+.right-side {
+    width: 50%; /* Adjust the width as necessary */
+    text-align: left; /* Aligns the text to the right */
+    margin-left:40%;
+    font-family: 'Agrandir';
+}
+a:link {
+    color: #614069; /* Red color for unvisited links */
+}
+a:visited {
+    color: #E4E2DD; /* Green color for visited links */
+}
+
+
+.footer-credits {
+    text-align: center;
+    margin-top: 2em;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Agrandir';
+    color: #E4E2DD;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .right-side {
+        text-align: center; /* Center align on smaller screens */
+    }
+
+    .footer-credits {
+        font-family: 'Agrandir';
+    }
+}
+
+
+/* Fonts */
+
+
+@font-face {
+    font-family: 'Agrandir';
+    src: url('/fonts/PPAgrandir-Variable.ttf') format('truetype');
+    font-weight: thin;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Editorial-Italic';
+    src: url('/fonts/PPEditorialNew-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Editorial-ThinItalic';
+    src: url('/fonts/PPEditorialNew-ThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Editorial-Regular';
+    src: url('/fonts/PPEditorialNew-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
